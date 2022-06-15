@@ -5,10 +5,10 @@ import "survey-core/modern.min.css";
 export default function App() {
   //surchage reactNatif
   const validateForm = (value) => {
-    if (value.Services.length > 0) {
+    if (value.services && value.services.length > 0) {
       alert(JSON.stringify(value));
     } else {
-      alert(JSON.stringify("champ Services est vide"));
+      alert(JSON.stringify("Selectionnez un service"));
     }
   };
 
@@ -21,17 +21,37 @@ export default function App() {
               name: "company",
               type: "text",
               title: "Société :",
+              placeholder: "Egerie",
+              isRequired: true,
+              validators: [
+                {
+                  type: "text",
+                  minLength: "3",
+                  text: "Minimum 3 caractères"
+                }
+              ]
+            },
+            {
+              name: "leaders",
+              title: "Dirigeant(e/s)",
+              type: "multiline-text",
+              placeholder: "M LARROUMETS Jean, M OGER Pierre",
               isRequired: true
             },
             {
-              name: "leader",
-              type: "text",
-              title: "Dirigeant :"
-            },
-            {
               name: "employees",
-              title: "Nom des salariés :",
-              type: "multiline-text"
+              type: "text",
+              title: "Nombres de salariés :",
+              placeholder: "-",
+              isRequired: true,
+              validators: [
+                {
+                  maxValue: 200,
+                  minValue: 1,
+                  type: "numeric",
+                  text: "Chiffre entre 1 et 200"
+                }
+              ]
             },
             {
               max: 50,
@@ -39,7 +59,9 @@ export default function App() {
               name: "partnership",
               step: 1,
               title: "Nombre de partenariat",
-              type: "slider"
+              defaultValue: 5,
+              type: "slider",
+              isRequired: true
             },
             {
               choices: [
@@ -51,7 +73,7 @@ export default function App() {
                 { text: "Système-réseau", value: "networks" },
                 { text: "Autres", value: "others" }
               ],
-              name: "Services",
+              name: "services",
               title: "Services :",
               type: "multiple-dropdown"
             },
