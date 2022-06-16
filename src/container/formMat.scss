@@ -1,0 +1,78 @@
+$blue_egerie: #274058 !important;
+$orange_egerie: #e94e1b !important;
+$white_egerie: #fff !important;
+$success_egerie: #198754 !important;
+$error_egerie: #FFBABB !important;
+$field_egerie : #f5f5f5 !important;
+.form-material-survey{
+  .box-logo{
+    padding: 2em 10em;
+    img{
+      position: relative;
+      width: 100%;
+    }
+  }
+  .MuiCardHeader-title{
+    color: $blue_egerie;
+  }
+  .MuiPaper-elevation{
+    border-bottom: 1px solid $blue_egerie;
+  }
+  input, .MuiOutlinedInput-root{
+    background-color: $field_egerie;
+    border-radius: 0.3em;
+    &::placeholder {
+      opacity: 0.5;
+      font-style: italic;
+    }
+  }
+  .css-187mznn-MuiSlider-root{
+    color : $orange_egerie;
+  }
+  button {
+    color : $orange_egerie;
+    border: 1px solid $blue_egerie;
+    margin: 2em;
+    &:hover{
+      background-color: $orange_egerie;
+      color: $white_egerie;
+    }
+  }
+  .hsotDM{
+    color: $orange_egerie;
+    font-size: 0.8em;
+    font-style: italic;
+    text-align: right;
+  }
+  .MuiChip-label{
+    background-color: $blue_egerie;
+    color: $white_egerie;
+    border-radius: 0.3em;
+    &:hover{
+      color: $orange_egerie;
+      cursor: pointer;
+    }
+  }
+}
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked{
+  color: $orange_egerie;
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+  background-color :$blue_egerie;
+  color: $white_egerie;
+  border: 1px solid $white_egerie;
+}
+.MuiSvgIcon-fontSizeMedium{
+  color: $orange_egerie;
+}
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper{
+  box-shadow: 0 0 10px 1px $blue_egerie;
+  li{
+    color: $blue_egerie;
+    border-bottom: 1px solid $field_egerie;
+    &:hover{
+      background-color: $blue_egerie;
+      color: $white_egerie;
+    }
+  }
+}
