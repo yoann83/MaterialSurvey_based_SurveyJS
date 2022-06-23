@@ -3,7 +3,8 @@ import "./formMat.scss";
 import { Image } from "react-native";
 
 export default function FormMaterialSurvey() {
-  //surchage reactNatif
+  const title = "materail - surveyjs";
+  //overload reactNatif select component
   const validateForm = (value) => {
     if (value.services && value.services.length > 0) {
       alert(JSON.stringify(value));
@@ -21,6 +22,7 @@ export default function FormMaterialSurvey() {
           }
         />
       </div>
+      <h1>{title.toUpperCase()}</h1>
       <Survey
         form={{
           questions: [
