@@ -13,7 +13,7 @@ export default function FormMaterialSurvey() {
   };
 
   return (
-    <div className="form-material-survey">
+    <div id="form-material-survey">
       <div className="box-logo">
         <Image
           source={
